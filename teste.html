@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鬱病</title>
+    <link rel="icon" type="image/png" href="icon.png"> <!-- Icône de l'onglet -->
+
+    <!-- Importation correcte des polices Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bellota:wght@300&display=swap" rel="stylesheet"> 
+
+    <!-- Lien vers la feuille de style externe -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>SAN9SHi</h1>
+    
+    <!-- Texte avec la largeur définie -->
+    <div class="profile-container">
+        <p class="profile-text">27 ♌︎ <span class="brackets">「</span> 精神疾患 <span class="brackets">」</span> weeb </p>
+    </div>
+
+    <!-- Conteneur de l'image avec le lecteur audio par-dessus -->
+    <div class="audio-container">
+        <img src="frieren.png" alt="Frieren" class="profile-image">
+        <div class="audio-player">
+		<button id="playPauseBtn">▶</button>
+		<canvas id="audioVisualizer"></canvas> <!-- Ajout de la visualisation -->
+		<audio id="audio" src="music.mp3"></audio>
+		</div>
+    </div>
+<div class="social-icons">
+    <a href="https://x.com/san9shi" target="_blank">
+        <img src="twitter-normal.png" alt="Twitter" class="icon" data-normal="twitter-normal.png" data-active="twitter-active.png">
+    </a>
+    <a href="https://myanimelist.net/profile/San9shi" target="_blank">
+        <img src="mal-normal.png" alt="MyAnimeList" class="icon" data-normal="mal-normal.png" data-active="mal-active.png">
+    </a>
+</div>
+
+    <!-- Lien vers le script JS -->
+    <script src="audio.js"></script>
+	<script src="social-icons.js"></script>
+</body>
+</html>

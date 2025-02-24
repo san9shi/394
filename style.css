@@ -1,0 +1,116 @@
+/* Styles généraux */
+body {
+    background-color: #FFFFF0; /* Couleur de fond */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+}
+
+/* Styles pour le titre */
+h1 {
+    color: #CCFF00; /* Couleur du texte */
+    font-family: 'Alumni Sans Pinstripe', sans-serif; /* Police Google Fonts */
+    font-size: 66px; /* Taille du texte */
+    font-weight: normal; /* Suppression du poids */
+    margin-bottom: 10px; /* Réduction de l'espace sous le titre */
+}
+
+/* Texte du profil */
+.profile-text {
+    color: #B4CFA7; /* Couleur du texte */
+    font-family: 'Bellota', cursive; /* Police Google Fonts */
+    font-size: 20px; /* Taille du texte */
+    display: inline-block; /* Permet d'obtenir la largeur exacte du texte */
+    margin-bottom: 10px; /* Espace sous le texte */
+}
+
+/* Style spécifique pour les crochets 「 et 」 */
+.brackets {
+    color: #CCFF00;
+}
+
+/* Conteneur du profil */
+.profile-container {
+    display: block; /* Assure que l'image est bien sous le texte */
+    width: fit-content; /* Adapte la largeur au texte */
+    margin: 0 auto; /* Centre le tout */
+}
+
+
+/* Conteneur pour positionner l'image et le lecteur audio */
+.audio-container {
+    position: relative;
+    width: 400px; /* Même taille que l'image */
+    height: 400px; /* Même taille que l'image */
+    margin: 0 auto; /* Centre horizontalement */
+}
+
+/* Image de profil */
+.profile-image {
+    width: 100%; /* Assure que l'image remplit son conteneur */
+    height: 100%;
+    display: block;
+}
+
+/* Style du lecteur audio */
+.audio-player {
+    position: absolute;
+    bottom: 0px;
+    left: 13px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espace entre le bouton et l'effet visuel */
+}
+
+/* Bouton play/pause */
+.audio-player button {
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: #CCFF00;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* Visualisation audio */
+#audioVisualizer {
+    width: 40px;  /* Largeur du visualiseur */
+    height: 20px; /* Hauteur du visualiseur */
+}
+.social-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espacement entre les icônes */
+}
+
+.social-icons {
+    position: relative;
+    width: 400px; /* Même largeur que l'image Frieren */
+    margin: 0 auto; /* Centre horizontalement */
+    display: flex;
+    justify-content: space-between; /* Place les icônes aux extrémités */
+    position: relative;
+    top: 10px; /* Ajuste la position sous l’image */
+}
+
+/* Icônes individuelles */
+.social-icons img {
+    width: 30px; /* Ajuste la taille */
+    height: 30px;
+    transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+    cursor: pointer;
+}
+.social-icons img[alt="Twitter"] {
+    width: 20px; /* Taille spécifique pour Twitter */
+    height: 20px;
+}
+/* Effet zoom au survol */
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Légère réduction au clic */
+.social-icons img:active {
+    transform: scale(1.1);
+}
