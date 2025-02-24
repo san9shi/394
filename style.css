@@ -1,5 +1,7 @@
 /* Styles généraux */
 body {
+	
+	
     background-color: #FFFFF0; /* Couleur de fond */
     font-family: Arial, sans-serif;
     text-align: center;
@@ -7,12 +9,14 @@ body {
 }
 
 /* Styles pour le titre */
+
 h1 {
     color: #CCFF00; /* Couleur du texte */
     font-family: 'Alumni Sans Pinstripe', sans-serif; /* Police Google Fonts */
     font-size: 66px; /* Taille du texte */
     font-weight: normal; /* Suppression du poids */
     margin-bottom: 10px; /* Réduction de l'espace sous le titre */
+	animation: subtleGlitch 1s infinite alternate ease-in-out;
 }
 
 /* Texte du profil */
@@ -51,7 +55,42 @@ h1 {
     height: 100%;
     display: block;
 }
+/* Icône ⓘ de crédit */
+.image-credit {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    font-size: 20px;
+    color: #FFFFF0;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
+/* Texte du crédit caché par défaut */
+.image-credit .credit-text {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 25px; /* Décalage du texte par rapport à ⓘ */
+    background: #FFFFF0;
+    color: #B4CFA7;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+/* Afficher le texte au survol */
+.image-credit:hover .credit-text {
+    display: block;
+}
+
+/* Effet au survol */
+.image-credit:hover {
+    transform: scale(1.2);
+}
 /* Style du lecteur audio */
 .audio-player {
     position: absolute;
@@ -91,7 +130,7 @@ h1 {
     display: flex;
     justify-content: space-between; /* Place les icônes aux extrémités */
     position: relative;
-    top: 10px; /* Ajuste la position sous l’image */
+    top: 5px; /* Ajuste la position sous l’image */
 }
 
 /* Icônes individuelles */
@@ -112,5 +151,32 @@ h1 {
 
 /* Légère réduction au clic */
 .social-icons img:active {
+    transform: scale(1.1);
+}
+/* 🌟 Correction pour MOBILE 📱 */
+@media (max-width: 480px) {
+    .audio-container {
+        width: 100%;
+        max-width: none;
+        text-align: center; /* Centre l’image */
+        height: auto;
+    }
+
+    .profile-image {
+        width: 100%;
+        height: auto; /* Garde les proportions */
+        display: block;
+    }
+
+    .social-icons {
+        width: 100%; /* S'assure que les icônes suivent la largeur de l'image */
+        padding: 0 20px; /* Ajoute un léger padding pour éviter qu'elles touchent le bord */
+    }
+
+    .social-icons img {
+        width: 25px; /* Ajuste la taille des icônes sur mobile */
+        height: 25px;
+    }
+}
     transform: scale(1.1);
 }
