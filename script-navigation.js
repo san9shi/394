@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     const pages = [
         { name: "San9shi", url: "index.html" },
-        { name: "Chapitre 1", url: "page1.html" },
-        { name: "Galerie", url: "page2.html" },
-        { name: "Contact", url: "page3.html" }
+        { name: "?", url: "page1.html" },
+        { name: "??", url: "page2.html" },
+        { name: "???", url: "page3.html" }
     ];
 
     let currentPage = pages.findIndex(page => window.location.pathname.includes(page.url));
