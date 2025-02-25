@@ -1,0 +1,103 @@
+/* Barre de navigation */
+.page-navigation {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px; /* Réduit l'espacement entre les éléments */
+    width: auto;
+}
+
+/* Boutons flèche */
+.nav-arrow {
+    background: none;
+    border: none;
+    font-size: 12px; /* Diminue la taille de la flèche */
+    cursor: pointer;
+    color: #CCFF00;
+    transition: transform 0.2s;
+    width: 20px; /* 50% de 40px */
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Empêche la réduction */
+}
+
+/* Effet au survol */
+.nav-arrow:hover {
+    transform: scale(1.2);
+}
+
+/* Cacher la flèche tout en conservant sa place */
+.nav-arrow.hidden {
+    opacity: 0; /* Rend invisible */
+    pointer-events: none; /* Désactive l'interaction */
+}
+
+/* Indicateur de page */
+.page-indicator {
+	font-family: 'Droid Serif', serif;
+    color: #FFFFF0;
+    background: #CCFF00;
+    
+    width: 20px; /* 50% de 40px */
+    height: 20px;
+    min-width: 20px; /* Garde la largeur fixe */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px; /* Ajuste la taille du texte */
+    cursor: pointer;
+    
+    transition: background 0.3s;
+    flex-shrink: 0; /* Garde la même taille */
+}
+
+/* Menu déroulant */
+.page-dropdown {
+	font-family: 'Exo', sans-serif; /* Police Exo */
+    color: #B4CFA7; /* Couleur du texte */
+
+    display: none;
+    position: absolute;
+    top: 30px; /* Ajuste la position pour correspondre à la nouvelle taille */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #FFFFF0;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 5px; /* Ajuste la taille pour s’adapter aux boutons réduits */
+}
+
+/* Liste du menu */
+.page-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+	
+    z-index: 1000;
+}
+
+/* Éléments du menu */
+.page-dropdown li {
+    padding: 4px 10px; /* Réduit la taille des éléments du menu */
+    cursor: pointer;
+    font-size: 12px; /* Ajuste la taille du texte */
+    transition: background 0.2s;
+}
+
+/* Effet au survol */
+.page-dropdown li:hover {
+    background: none; /* Supprime le changement de fond */
+    color: #CCFF00; /* Change uniquement la couleur du texte */
+}
+/* Afficher le menu déroulant */
+.page-indicator.open + .page-dropdown {
+    display: block;
+}
+
